@@ -7,8 +7,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  box-sizing: border-box;
 }
+:root {
+  --cn-primary: #007bff;
+  --cn-secondary: #6c757d;
+  --cn-success: #28a745;
+  --cn-danger: #dc3545;
+  --cn-warning: #ffc107;
+  --cn-info: #17a2b8;
+  --cn-light: #f8f9fa;
+  --cn-dark: #343a40;
+  --cn-white: #fff;
+}
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");

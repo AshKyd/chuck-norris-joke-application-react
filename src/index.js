@@ -1,13 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./components/App";
+import { Provider, connect } from "react-redux";
+import configureStore from "./store";
+import { MAX_FAVOURITES } from "./store/reducers/quotes";
 import "./index.css";
-import App from "./commponents/App";
-import * as serviceWorker from "./serviceWorker";
-import store from "./store";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import {
+  getRandom,
+  addFavourite as onFav,
+  removeFavourite as onUnfav,
+  addRandomFavourite
+} from "./store/actions/quotes";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import { setView } from "./store/actions/nav";
+
+const store = configureStore();
+
+const ConnectedApp = connect(
+  props => ({
+    quotes: props.quotes.list,
+    favourites: props.quotes.favourites,
+    quotesError: props.quotes.error,
+    view: props.nav.view,
+    loading: props.quotes.loading
+  }),
+  { getRandom, addRandomFavourite, onFav, onUnfav, setView }
+)(App);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ConnectedApp maxFavourites={MAX_FAVOURITES} />
+  </Provider>,
+  document.getElementById("root")
+);

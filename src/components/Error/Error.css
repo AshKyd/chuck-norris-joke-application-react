@@ -1,0 +1,12 @@
+.Error {
+  background: var(--cn-danger);
+  color: var(--cn-white);
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 10px 20px;
+  animation: 0.2s fadeIn;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+}

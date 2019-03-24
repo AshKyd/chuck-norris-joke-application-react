@@ -1,0 +1,23 @@
+.Loader {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 2px solid black;
+  border-color: var(--cn-primary) var(--cn-white) var(--cn-white)
+    var(--cn-white);
+  animation: linear infinite 1s loader;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.Loader--loading {
+  opacity: 1;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
