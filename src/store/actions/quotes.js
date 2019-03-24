@@ -39,7 +39,7 @@ export function getRandom() {
 export function addRandomFavourite() {
   return function(dispatch) {
     dispatch(setLoading());
-    fetch("http://api.icndb.com/jokes/random/1")
+    fetch("https://api.icndb.com/jokes/random/1")
       .then(response => response.json())
       .then(json => {
         const { id, joke } = json.value[0];
