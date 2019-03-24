@@ -1,0 +1,46 @@
+/*
+  Accessible hide https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.Checkbox .accessible-hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.Checkbox {
+  background: var(--cn-light);
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.15s;
+}
+
+.Checkbox__icon {
+  color: var(--cn-secondary);
+  transition: all 0.3s;
+}
+
+.Checkbox--checked .Checkbox__icon {
+  color: var(--cn-primary);
+}
+
+.Checkbox:focus .Checkbox__icon,
+.Checkbox:hover .Checkbox__icon {
+  transform: scale(1.2);
+}
+
+.Checkbox:active {
+  transform: scale(0.9);
+}
+
+.Checkbox--with-label {
+  width: auto;
+  padding: 0 15px;
+}
