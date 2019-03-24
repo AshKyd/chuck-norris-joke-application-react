@@ -1,0 +1,47 @@
+.LoginPopup {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.2s fadeIn;
+  z-index: 20;
+}
+
+.LoginPopup__inner {
+  width: 320px;
+  background: var(--cn-white);
+  color: black;
+  border-radius: 4px;
+  padding: 0 20px 20px;
+  text-align: left;
+}
+
+.LoginPopup__form-field {
+  display: block;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.LoginPopup__form-field label {
+  display: inline-block;
+  width: 30%;
+  font-weight: bold;
+}
+
+.LoginPopup__form-field input {
+  flex: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
