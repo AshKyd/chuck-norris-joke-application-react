@@ -19,7 +19,7 @@ export function clearLoading() {
 export function getRandom() {
   return function(dispatch) {
     dispatch(setLoading());
-    fetch("http://api.icndb.com/jokes/random/10")
+    fetch("https://api.icndb.com/jokes/random/10")
       .then(response => response.json())
       .then(json => {
         dispatch({
