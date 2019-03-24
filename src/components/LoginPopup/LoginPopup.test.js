@@ -8,13 +8,20 @@ import {
 
 describe("doesntContainIncreasingStraight", () => {
   describe("invalid passwords", () => {
-    ["badpassword", "09876", "acd", "@AB", "YZ[", " `ab", "yz{"].forEach(
-      badPassword => {
-        it(`should not match password ${badPassword}`, () => {
-          expect(doesntContainIncreasingStraight(badPassword)).toEqual(true);
-        });
-      }
-    );
+    [
+      "test123",
+      "badpassword",
+      "09876",
+      "acd",
+      "@AB",
+      "YZ[",
+      " `ab",
+      "yz{"
+    ].forEach(badPassword => {
+      it(`should not match password ${badPassword}`, () => {
+        expect(doesntContainIncreasingStraight(badPassword)).toEqual(true);
+      });
+    });
   });
   describe("valid passwords", () => {
     ["abc", "cde", "fgh", "xyz", "ABC", "XYZ"].forEach(goodPassword => {
