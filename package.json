@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-loader": "^8.0.5",
     "entities": "^1.1.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
@@ -12,8 +11,7 @@
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
-    "redux-thunk": "^2.3.0",
-    "yarn": "^1.13.0"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,7 +33,9 @@
   "devDependencies": {
     "@storybook/react": "^5.0.4",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
     "babel-runtime": "^6.26.0",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "yarn": "^1.13.0"
   }
 }
